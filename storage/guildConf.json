@@ -1,0 +1,8 @@
+{
+  "prefix": ">",
+  "mod_logs": "",
+  "greetingschannel": "",
+  "joinmsg": " has joined.",
+  "leavemsg": " has left",
+  "banmsg": " has been banned :hammer:"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "assistance",
+  "version": "0.0.1",
+  "description": "Assistance by sdaone",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aglowingmonitor/cassistance.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aglowingmonitor/cassistance/issues"
+  },
+  "homepage": "https://github.com/aglowingmonitor/cassistance#readme",
+  "dependencies": {
+    "ascii": "^1.0.0",
+    "ascii-table": "0.0.9",
+    "better-sqlite3": "^5.4.3",
+    "discord.js": "^11.5.1",
+    "fs": "0.0.1-security",
+    "mongoose": "^5.9.7",
+    "ms": "^2.1.2",
+    "noblox.js": "^4.5.4"
+  }
+}
