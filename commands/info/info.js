@@ -8,10 +8,9 @@ module.exports={
         const infoembed = new RichEmbed()
             .setColor("BLUE")
             .setAuthor("Centro Bot")
-            .addField("Version", "1.4a", true)
+            .addField("Version", "1.1", true)
             .addField("Created by", "dev_sda3#0374")
-            .addField("What is this?", "A bot.", true)
-            .addField("Note", "Bot is in development. This'll eventually grow to more in the near future.",true);
+            .addField("Source", "The full sourcecode can be downloaded [here](https://github.com/dev-sda1/CentroBot)", true);
 
         message.channel.send(infoembed);
     }

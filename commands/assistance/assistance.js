@@ -20,7 +20,6 @@ mongoose.connect('',
 let fullTicket = [];
 
 let actuallythroughdm = false;
-let oneinProgress = false;
 
 function moderationIssue(client,message){
     console.log("MOD ISSUE");
@@ -35,34 +34,39 @@ function moderationIssue(client,message){
     message.author.send(embed2).then(async msg2 => {
         let emoji2 = await promptMessage(msg2, message.author, 60, ["1️⃣", "2️⃣", "❌"]);
 
-        if (emoji2 === "1️⃣") {
-            let embed2 = new RichEmbed()
+        switch(emoji2){
+            case "1️⃣":
+                let embed2 = new RichEmbed()
                 .setColor("BLUE")
                 .setAuthor("Moderation issue - Moderator Role")
                 .setDescription("Alright, it's a moderator issue. Can you briefly describe your issue? (Please also include any screenshot links here too) **Times out in 300s**")
-            message.author.send(embed2).then(async msg3 => {
+                
+                message.author.send(embed2).then(async msg3 => {
                 //console.log(msg3);
-                let response = await promptMessageString(msg3, message.author, 300);
-                fullTicket[0] = "Moderator Issue";
-                fullTicket[1] = response;
-                fullTicket[2] = message.author.id;
+                    let response = await promptMessageString(msg3, message.author, 300);
+                    fullTicket[0] = "Moderator Issue";
+                    fullTicket[1] = response;
+                    fullTicket[2] = message.author.id;
                 processTicket(client,message,fullTicket);
             });
 
-        } else if (emoji2 === "2️⃣") {
-            let embed2 = new RichEmbed()
+            case "2️⃣":
+                let embed3 = new RichEmbed()
                 .setColor("BLUE")
                 .setAuthor("Moderation issue - Admin Role")
                 .setDescription("Alright, it's an admin issue. Can you briefly describe your issue? (Please also include any screenshot links here too) **Times out in 300s**")
-            message.author.send(embed2).then(async msg3 => {
-                let response = await promptMessageString(msg3, message.author, 300);
-                fullTicket[0] = "Admin Issue";
-                fullTicket[1] = response;
-                fullTicket[2] = message.author.id;
+                message.author.send(embed3).then(async msg3 => {
+                    let response = await promptMessageString(msg3, message.author, 300);
+                    fullTicket[0] = "Admin Issue";
+                    fullTicket[1] = response;
+                    fullTicket[2] = message.author.id;
                 processTicket(client,message,fullTicket);
             });
-        } else if(emoji2 === "❌"){
-            return true;
+            case "❌":
+                return true;
+
+            default:
+                return message.send("An error occured");
         }
     });
 }
@@ -97,14 +101,25 @@ function mainMenu(client,message){
     message.author.send(embed).then(async msg => {
         let emoji = await promptMessage(msg, message.author, 60, ["1️⃣", "2️⃣"]);
 
-        if (emoji === "1️⃣") { //MODERATION ISSUE
-            let c = generalQuery(client, message);
-            console.log("Checking if cancelled");
-            
-        } else if (emoji === "2️⃣") { //OPTION NOT LISTED (OTHER)
-            let c = moderationIssue(client, message);
-            console.log("Checking if cancelled");
+        switch (emoji){
+            case "1️⃣":
+                generalQuery(client,message);
+                break;
+            case "2️⃣":
+                moderationIssue(client,message);
+                break;
+            default:
+                return message.send("An error occured.");
         }
+
+        //if (emoji === "1️⃣") { //MODERATION ISSUE
+        //    let c = generalQuery(client, message);
+        //    console.log("Checking if cancelled");
+        //    
+        //} else if (emoji === "2️⃣") { //OPTION NOT LISTED (OTHER)
+        //    let c = moderationIssue(client, message);
+        //    console.log("Checking if cancelled");
+       // }
     });
 }
 
