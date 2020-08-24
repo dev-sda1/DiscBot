@@ -14,4 +14,3 @@ Do get in touch! I'd love to know how far this small project is reaching others 
 
 # 14/08/20 Update
 + Beginning of the repo
-The bot is in active development and is used in a limited capacity on the server already (mainly for the occasional fun command right now)
