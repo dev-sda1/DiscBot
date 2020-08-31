@@ -1,4 +1,7 @@
 {
     "token": "",
-    "prefix": ">"
+    "prefix": ">",
+    "mongodb_username": "",
+    "mongodb_password": "",
+    "mongodb_url": ""
 }
