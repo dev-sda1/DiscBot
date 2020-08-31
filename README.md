@@ -1,11 +1,6 @@
 # A fully functional discord bot developed for a Roblox server I administrate on.
 Centrobot started out as a side project for a discord server, but I have since decided to opensource it for others to use.
-
-# Providing Credit
-I would really appreciate it if you kept the credit in the info.js file to help more people find the original source!
-
-# Does a large server you run use Centrobot sourcecode?
-Do get in touch! I'd love to know how far this small project is reaching others in the larger discord space
+There's also a trello as the project expands that you can keep an eye on [here](https://trello.com/b/FIP9LU4l/centrobot-updates)
 
 # 24/08/20 Update
 + Updated lodash to 4.17.20 to patch low-severity security issue
@@ -14,3 +9,9 @@ Do get in touch! I'd love to know how far this small project is reaching others 
 
 # 14/08/20 Update
 + Beginning of the repo
+
+# Providing Credit
+I would really appreciate it if you kept the credit in the info.js file to help more people find the original source!
+
+# Does a large server you run use Centrobot sourcecode?
+Do get in touch! I'd love to know how far this small project is reaching others in the larger discord space
