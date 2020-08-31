@@ -2,6 +2,7 @@
 const{Client, RichEmbed, Collection} = require("discord.js");
 const config = require("./storage/config.json");
 const fs = require("fs");
+const mongoose = require("mongoose");
 //mongodb maybe in the near future.
 
 
@@ -9,7 +10,8 @@ const fs = require("fs");
 const settings = require("./storage/server_settings.json");
 const server_rankings = require("./storage/ranks.json");
 const warnings = require("./storage/warnings.json");
-const tickets = require("./storage/tickets.json")
+const tickets = require("./storage/tickets.json");
+const { exit } = require("process");
 
 
 //Preparing the bot for use
@@ -46,7 +48,7 @@ client.aliases = new Collection();
 
 //Bot
 client.on("ready", async()=>{
-    console.log(`\nHi! ${client.user.username} is now online!`);
+    console.log(`\nLogin successful as: ${client.user.username}`);
 
     client.user.setPresence({
         game:{
@@ -113,6 +115,28 @@ client.on("message", async message=>{
      }
 });
 
+//Checking if mongodb connects successfully
+try{
+    mongoose.connect(config.mongodb_url,
+        {
+            "auth": {
+            "authSource": "admin"
+            },
+        "user": config.mongodb_username,
+        "pass": config.mongodb_password,
+        useNewUrlParser: true
+    });
+}catch(e){
+    console.log('\x1b[31m', `ERROR: Mongodb connection failed. Check the details you added in your config.json and try again.\nFull details: ${e}`);
+    exit();
+}
 
-//Logging into the bot hopefully.
-client.login(config.token);
+console.log("Logging in..");
+try{
+    client.login(config.token);
+}catch(e){
+    console.log('\x1b[31m', "ERROR: Login failed. Check your token.");
+    exit();
+}
+
+

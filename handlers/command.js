@@ -13,7 +13,7 @@ module.exports = (client)=>{
                 client.commands.set(pull.name ,pull);
                 table.addRow(file, "OK")
             }else{
-                table.addRow(file, '❌ help.name is missing');
+                table.addRow(file, 'Identifiers missing!');
                 continue;
             }
 

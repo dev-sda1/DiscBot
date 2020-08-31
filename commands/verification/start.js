@@ -2,15 +2,6 @@ const{RichEmbed} = require("discord.js");
 const mongoose = require("mongoose");
 const noblox = require("noblox.js");
 
-mongoose.connect('',
-        {
-            "auth": {
-                "authSource": ""
-            },
-            "user": "",
-            "pass": ""
-        });
-
 const altCheck = require("../../models/potentialalts.js");
 
 module.exports={

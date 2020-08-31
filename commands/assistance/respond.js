@@ -15,16 +15,7 @@ module.exports={
         console.log("Warn command activated:TM:");
 
         if(message.deletable) message.delete();
-
-        mongoose.connect('',
-        {
-            "auth": {
-                "authSource": ""
-            },
-            "user": "",
-            "pass": "",
-            useNewUrlParser: true
-        });
+        
         let ticketID = args[0]
         let response = args.join(" ").slice(String(ticketID).length);
 
