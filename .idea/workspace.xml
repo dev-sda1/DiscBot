@@ -26,6 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="384e63e2-01b9-437d-a3ab-b3990f090ff2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot.js" beforeDir="false" afterPath="$PROJECT_DIR$/bot.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commands/fun/star.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/fun/star.js" afterDir="false" />
     </list>
@@ -97,8 +98,16 @@
       <option name="presentableId" value="Default" />
       <updated>1599078923839</updated>
       <workItem from="1599078926800" duration="27000" />
-      <workItem from="1599078995139" duration="787000" />
+      <workItem from="1599078995139" duration="963000" />
     </task>
+    <task id="LOCAL-00001" summary="the beginning of adding info panels to various commands that require arguments">
+      <created>1599079845046</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599079845046</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,5 +135,27 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="the beginning of adding info panels to various commands that require arguments" />
+    <option name="LAST_COMMIT_MESSAGE" value="the beginning of adding info panels to various commands that require arguments" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1348" height="227" key="GridCell.Tab.0.bottom" timestamp="1599079884290">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1348" height="227" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1599079884290" />
+    <state width="1348" height="227" key="GridCell.Tab.0.center" timestamp="1599079884290">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1348" height="227" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1599079884290" />
+    <state width="1348" height="227" key="GridCell.Tab.0.left" timestamp="1599079884290">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1348" height="227" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1599079884290" />
+    <state width="1348" height="227" key="GridCell.Tab.0.right" timestamp="1599079884290">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1348" height="227" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1599079884290" />
   </component>
 </project>

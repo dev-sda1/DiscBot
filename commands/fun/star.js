@@ -1,12 +1,14 @@
 //Star.js
 //Basically a starboard lmao
 const{RichEmbed} = require("discord.js");
+const config = require("../../storage/config.json"); //this will be removed soon with the server config stuff
 
 
 module.exports={
     name: "star",
     category: "fun",
     description: "Allows a moderator to 'star' a message for everyone to see lol",
+    usage: `${config.prefix} [message id]`,
     run: async(client,message,args)=>{
         message.channel.fetchMessage(args[0]).then(msg =>{
             if(message.deletable) message.delete();
@@ -19,7 +21,7 @@ module.exports={
                 image = attachment.url || "";
             });
 
-            if(image == ""){
+            if(image == null){
                 let starEmbed_withImage = new RichEmbed()
                     .setAuthor(msg.author.username, msg.author.avatarURL)
                     .setDescription(msg.content)
@@ -33,10 +35,19 @@ module.exports={
                     .setImage(image || "");
                 client.channels.get(starboard_id).send(`:star: <#${message.channel.id}> ID: ${args[0]}`,starEmbed_withImage);
             }
-            
-        }).catch(err=>console.log(err));
-        //console.log(target.content);
+            //console.log(target.content);
 
-        //log stuff would go here.
+            //log stuff would go here.
+        }).catch(err=>console.log(err));
+        if(args[0] == null){
+            //some random stuff explaining the command goes here idk
+            let explainEmbed = new RichEmbed()
+                .setAuthor(client.name, client.avatarURL)
+                .setDescription(module.exports.name)
+                .addField("Category", module.exports.category)
+                .addField("Description", module.exports.description)
+                .addField("Usage", module.exports.usage);
+            await message.channel.send(explainEmbed);
+        }
     }
 }

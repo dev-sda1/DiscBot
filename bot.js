@@ -60,6 +60,10 @@ client.on("ready", async()=>{
 });
 
 client.on("guildCreate", (guild)=>{
+    if(config.prefix == null){
+        console.log("WARNING: No prefix was found in your config.json. Prefix will default to >")
+    }
+
     console.log("Added to a server? How?");
     if(!settings[guild.id]){
         settings[guild.id] = {
@@ -93,7 +97,7 @@ client.on("guildMemberAdd", member => {
 })
 
 client.on("message", async message=>{
-    let prefix = ">";
+    let prefix = config.prefix || ">";
 
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const cmd = args.shift().toLowerCase();
@@ -114,6 +118,16 @@ client.on("message", async message=>{
         command.run(client,message,args);
      }
 });
+
+//Check if anything from the configuration file is missing.
+if(config.token == null){
+    console.log('\x1b[31m', `ERROR: Token not found. Get your bot token from discord.com/developers/applications`);
+    exit();
+}
+
+if(config.mongodb_password || config.mongodb_url || config.mongodb_username == null){
+    console.log('\x1b[31m', `ERROR: One or more mongodb fields in your config.json are empty.`)
+}
 
 //Checking if mongodb connects successfully
 try{
