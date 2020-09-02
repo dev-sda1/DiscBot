@@ -13,5 +13,6 @@ module.exports={
             .addField("Powered by [witty_name]", "[Add to Server](https://github.com/dev-sda1/CentroBot)", true);
 
         await message.channel.send(infoembed);
+        //Might make this formatted better later on
     }
 }
