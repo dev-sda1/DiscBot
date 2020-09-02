@@ -4,9 +4,9 @@
 const { RichEmbed } = require("discord.js");
 
 module.exports = {
-    name: "coins",
+    name: "rank",
     category: "fun",
-    description: "Shows user their coins balance",
+    description: "Displays your server XP and rank.",
     run: async (client, message, args) => {
         let usr = message.author;
 
