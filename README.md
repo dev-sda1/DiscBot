@@ -2,16 +2,17 @@
 Centrobot started out as a side project for a discord server, but I have since decided to opensource it for others to use.
 There's also a trello as the project expands that you can keep an eye on [here](https://trello.com/b/FIP9LU4l/centrobot-updates)
 
-# 24/08/20 Update
-+ Updated lodash to 4.17.20 to patch low-severity security issue
-+ Assistance handlers replaced with case switches for easier modification
-+ Sourcecode url added to info command
+Shield: [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
-# 14/08/20 Update
-+ Beginning of the repo
+This work is licensed under a
+[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
 
-# Providing Credit
-I would really appreciate it if you kept the credit in the info.js file to help more people find the original source!
+[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
+
+[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
+[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
+[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+
 
 # Does a large server you run use Centrobot sourcecode?
 Do get in touch! I'd love to know how far this small project is reaching others in the larger discord space
