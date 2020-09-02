@@ -4,14 +4,14 @@ module.exports={
     name: "info",
     category: "info",
     description: "Bot information",
-    run: async(client,message,args)=>{
+    run: async(client,message)=>{
         const infoembed = new RichEmbed()
             .setColor("BLUE")
             .setAuthor("Centro Bot")
-            .addField("Version", "1.1", true)
+            .addField("Version", "1.14a", true)
             .addField("Created by", "dev_sda3#0374")
-            .addField("Source", "The full sourcecode can be downloaded [here](https://github.com/dev-sda1/CentroBot)", true);
+            .addField("Powered by [witty_name]", "[Add to Server](https://github.com/dev-sda1/CentroBot)", true);
 
-        message.channel.send(infoembed);
+        await message.channel.send(infoembed);
     }
 }

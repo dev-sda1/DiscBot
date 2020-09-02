@@ -1,5 +1,6 @@
 //Star.js
 //Basically a starboard lmao
+//TODO: Add starboard configurations
 const{RichEmbed} = require("discord.js");
 const config = require("../../storage/config.json"); //this will be removed soon with the server config stuff
 
@@ -39,7 +40,7 @@ module.exports={
 
             //log stuff would go here.
         }).catch(err=>console.log(err));
-        if(args[0] == null){
+        if(args == null){
             //some random stuff explaining the command goes here idk
             let explainEmbed = new RichEmbed()
                 .setAuthor(client.name, client.avatarURL)

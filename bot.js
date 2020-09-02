@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 
 //Client settings
 const settings = require("./storage/server_settings.json");
-const server_rankings = require("./storage/ranks.json");
+const server_rankings = require("./storage/ranks.json"); //These are here for later reference, dunno what to do with them yet.
 const warnings = require("./storage/warnings.json");
 const tickets = require("./storage/tickets.json");
 const { exit } = require("process");
@@ -52,7 +52,7 @@ client.on("ready", async()=>{
 
     client.user.setPresence({
         game:{
-            name: 'trains at Moor St',
+            name: 'you',
             type: "Watching",
             url: "https://dev.sda.one"
         }

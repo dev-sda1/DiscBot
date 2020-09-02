@@ -26,9 +26,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="384e63e2-01b9-437d-a3ab-b3990f090ff2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot.js" beforeDir="false" afterPath="$PROJECT_DIR$/bot.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commands/fun/star.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/fun/star.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/info/info.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/info/info.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/info/ping.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/info/ping.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/moderation/ban.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/moderation/ban.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/moderation/kick.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/moderation/kick.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/moderation/warn.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/moderation/warn.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +83,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -98,7 +105,7 @@
       <option name="presentableId" value="Default" />
       <updated>1599078923839</updated>
       <workItem from="1599078926800" duration="27000" />
-      <workItem from="1599078995139" duration="963000" />
+      <workItem from="1599078995139" duration="2263000" />
     </task>
     <task id="LOCAL-00001" summary="the beginning of adding info panels to various commands that require arguments">
       <created>1599079845046</created>
@@ -107,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599079845046</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="the beginning of adding info panels to various commands that require arguments">
+      <created>1599079971953</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1599079971953</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,7 +152,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="the beginning of adding info panels to various commands that require arguments" />
-    <option name="LAST_COMMIT_MESSAGE" value="the beginning of adding info panels to various commands that require arguments" />
+    <MESSAGE value="Addition of the help panels and a bit of clearup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Addition of the help panels and a bit of clearup" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1348" height="227" key="GridCell.Tab.0.bottom" timestamp="1599079884290">
