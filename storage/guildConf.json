@@ -1,6 +1,6 @@
 {
   "prefix": ">",
-  "mod_logs": "",
+  "log_channel": "",
   "greetingschannel": "",
   "joinmsg": " has joined.",
   "leavemsg": " has left",

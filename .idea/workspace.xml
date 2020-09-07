@@ -26,12 +26,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="384e63e2-01b9-437d-a3ab-b3990f090ff2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/commands/info/ping.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/info/ping.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot.js" beforeDir="false" afterPath="$PROJECT_DIR$/bot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/guildConf.json" beforeDir="false" afterPath="$PROJECT_DIR$/storage/guildConf.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <excluded-from-favorite>
@@ -97,7 +107,8 @@
       <option name="presentableId" value="Default" />
       <updated>1599078923839</updated>
       <workItem from="1599078926800" duration="27000" />
-      <workItem from="1599078995139" duration="2591000" />
+      <workItem from="1599078995139" duration="2947000" />
+      <workItem from="1599128537925" duration="2546000" />
     </task>
     <task id="LOCAL-00001" summary="the beginning of adding info panels to various commands that require arguments">
       <created>1599079845046</created>
@@ -127,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599081538715</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="small edit to ping.js">
+      <created>1599081729158</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1599081729158</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,29 +173,31 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="the beginning of adding info panels to various commands that require arguments" />
     <MESSAGE value="Addition of the help panels and a bit of clearup" />
     <MESSAGE value="small edit to info.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="small edit to info.js" />
+    <MESSAGE value="small edit to ping.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="small edit to ping.js" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1348" height="227" key="GridCell.Tab.0.bottom" timestamp="1599079884290">
+    <state width="1348" height="227" key="GridCell.Tab.0.bottom" timestamp="1599082078152">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="227" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1599079884290" />
-    <state width="1348" height="227" key="GridCell.Tab.0.center" timestamp="1599079884290">
+    <state width="1348" height="227" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1599082078152" />
+    <state width="1348" height="227" key="GridCell.Tab.0.center" timestamp="1599082078152">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="227" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1599079884290" />
-    <state width="1348" height="227" key="GridCell.Tab.0.left" timestamp="1599079884290">
+    <state width="1348" height="227" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1599082078152" />
+    <state width="1348" height="227" key="GridCell.Tab.0.left" timestamp="1599082078152">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="227" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1599079884290" />
-    <state width="1348" height="227" key="GridCell.Tab.0.right" timestamp="1599079884290">
+    <state width="1348" height="227" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1599082078152" />
+    <state width="1348" height="227" key="GridCell.Tab.0.right" timestamp="1599082078152">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="227" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1599079884290" />
+    <state width="1348" height="227" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1599082078152" />
   </component>
 </project>

@@ -3,6 +3,7 @@ const{Client, RichEmbed, Collection} = require("discord.js");
 const config = require("./storage/config.json");
 const fs = require("fs");
 const mongoose = require("mongoose");
+const settings_model = require("/models/config.js")
 //mongodb maybe in the near future.
 
 
@@ -60,24 +61,45 @@ client.on("ready", async()=>{
 });
 
 client.on("guildCreate", (guild)=>{
-    if(config.prefix == null){
-        console.log("WARNING: No prefix was found in your config.json. Prefix will default to >")
-    }
-
     console.log("Added to a server? How?");
-    if(!settings[guild.id]){
-        settings[guild.id] = {
-            prefix: ".",
-            mod_logs: "",
-            greetingschannel: "",
-            joinmsg: " has joined.",
-            leavemsg: " has left",
-            banmsg: " has been banned :hammer:"
+    //DB Checking to see if there's even a config lol
+    settings_model.findOne({
+        "_id": guild.id
+    }, (err,result)=>{
+        if(result){
+         //somehow do some stuff here lol
+        }else if (!result || err){
+            //create the config or something idk
+            const guild_stuff = new settings_model({
+                _id: guild.id,
+                log_channel: "",
+                greetingschannel: "",
+                joinmsg: " has joined.",
+                leavemsg: " has left",
+                banmsg: " has been banned :hammer:"
+            })
+
+            guild_stuff.save()
+                .then(result => console.log(result))
+                .catch(err => console.log(err));
+
         }
-    }
-    fs.writeFile("./storage/server_settings.json", JSON.stringify(settings, null, 2), (err)=>{
-        if(err) console.warn(`[SE-SETTINGS] Error creating guild information: ${err}`);
     })
+
+
+    //if(!settings[guild.id]){
+    //    settings[guild.id] = {
+    //        prefix: ".",
+    //        mod_logs: "",
+    //        greetingschannel: "",
+    //        joinmsg: " has joined.",
+    //        leavemsg: " has left",
+    //        banmsg: " has been banned :hammer:"
+    //    }
+    //}
+    //fs.writeFile("./storage/server_settings.json", JSON.stringify(settings, null, 2), (err)=>{
+    //    if(err) console.warn(`[SE-SETTINGS] Error creating guild information: ${err}`);
+    //})
 })
 
 client.on("guildDelete", (guild)=>{

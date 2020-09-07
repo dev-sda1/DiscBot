@@ -20,6 +20,7 @@
     "ascii": "^1.0.0",
     "ascii-table": "0.0.9",
     "better-sqlite3": "^5.4.3",
+    "bl": "^4.0.3",
     "discord.js": "^11.5.1",
     "fs": "0.0.1-security",
     "lodash": "^4.17.20",
