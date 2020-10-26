@@ -1,4 +1,7 @@
 {
     "token": "",
+    "mongodb_authSource": "admin",
+    "mongodb_username": "",
+    "mongodb_password": "",
     "prefix": ">"
 }

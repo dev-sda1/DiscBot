@@ -23,6 +23,7 @@
     "discord.js": "^11.5.1",
     "fs": "0.0.1-security",
     "lodash": "^4.17.20",
+    "minimist": "^1.2.5",
     "mongoose": "^5.9.7",
     "ms": "^2.1.2",
     "noblox.js": "^4.5.4"

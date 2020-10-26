@@ -7,9 +7,6 @@ const fs = require("fs");
 
 //Client settings
 const settings = require("./storage/server_settings.json");
-const server_rankings = require("./storage/ranks.json");
-const warnings = require("./storage/warnings.json");
-const tickets = require("./storage/tickets.json")
 
 
 //Preparing the bot for use
@@ -23,26 +20,6 @@ client.aliases = new Collection();
 ["command"].forEach(handler => {
     require(`./handlers/${handler}`)(client);
 });
-
-
-
-// //Command handling (not used anymore but kept as a backup)
-// fs.readdir("./commands/", (err,file)=>{
-//     if(err) console.log(err); //if error it logs it in console because fuck doing actual responses
-
-//     let jsfile = file.filter(f => f.split(".").pop() === "js");
-//     if(jsfile.length <=0){
-//         console.log("Commands couldn't be found."); //If the folder either doesn't exist or is empty
-//         return;
-//     }
-
-//     jsfile.forEach((f, i)=>{
-//         let props = require(`./commands/${f}`);
-//         console.log(`${f} loaded`);
-//         client.commands.set(props.help.name, props);
-//     });
-// });
-
 
 //Bot
 client.on("ready", async()=>{
@@ -115,4 +92,13 @@ client.on("message", async message=>{
 
 
 //Logging into the bot hopefully.
-client.login(config.token);
+//client.login(config.token);
+
+var argv = require('minimist')(process.argv.slice(2));
+console.log(argv);
+
+// node bot.js --token [here]
+// node bot.js --debug
+// node bot.js
+
+
