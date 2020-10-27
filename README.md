@@ -15,6 +15,8 @@ There's also a trello as the project expands that you can keep an eye on [here](
 + 3. Navigate to the root of the folder and run ``npm install && npm bot``
 + 4. Check that your bot is online in the server!
 
+Can't figure out bot permissions? Use [this website](https://discordapi.com/permissions.html)
+
 If you want it to keep running, see the guide below for how to run it with forever:
 
 # Running it under [Forever](https://www.npmjs.com/package/forever)
