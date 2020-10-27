@@ -3,7 +3,7 @@ const ticketCheck = require("../../models/ticket.js");
 const mongoose = require("mongoose");
 const logs = require("../../functions/logaction.js");
 
-const{promptMessage, promptMessageString} = require("../../functions.js")
+const{promptMessage, promptMessageString} = require("../../functions/responses.js")
 
 
 module.exports={
@@ -15,16 +15,7 @@ module.exports={
         console.log("Warn command activated:TM:");
 
         if(message.deletable) message.delete();
-
-        mongoose.connect('',
-        {
-            "auth": {
-                "authSource": ""
-            },
-            "user": "",
-            "pass": "",
-            useNewUrlParser: true
-        });
+        
         let ticketID = args[0]
         let response = args.join(" ").slice(String(ticketID).length);
 
@@ -103,5 +94,3 @@ module.exports={
         message.channel.send(`:checkmark: Ticket response has been sent for ${ticketID}`);
     }
 }
-
-//db.grantRolesToUser('sdaOne', [{ role: 'root', db: 'admin' }]);

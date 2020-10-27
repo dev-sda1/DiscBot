@@ -1,1 +1,1 @@
-//Rank handler to do rank shit
+//To have stuff done when the XP system is in place

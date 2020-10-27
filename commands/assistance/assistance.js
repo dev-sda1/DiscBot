@@ -2,20 +2,10 @@
 
 
 const{RichEmbed} = require("discord.js");
-const{promptMessage, promptMessageString} = require("../../functions.js")
+const{promptMessage, promptMessageString} = require("../../functions/responses.js")
 const mongoose = require("mongoose");
 const ticket = require("../../models/ticket.js");
 const tblacklist = require("../../models/ticket_blacklist.js");
-
-mongoose.connect('',
-        {
-            "auth": {
-                "authSource": ""
-            },
-            "user": "",
-            "pass": "",
-            useNewUrlParser: true
-        });
 
 let fullTicket = [];
 

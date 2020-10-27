@@ -14,16 +14,6 @@ module.exports={
 
         if(message.deletable) message.delete();
 
-        mongoose.connect('',
-        {
-            "auth": {
-                "authSource": ""
-            },
-            "user": "",
-            "pass": "",
-            useNewUrlParser: true
-        });
-
         let blacklisteduser = message.mentions.members.first() || message.guild.members.get(args[0])
 
         if(!message.member.hasPermission("MANAGE_MESSAGES")) return;
