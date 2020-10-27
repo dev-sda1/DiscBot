@@ -8,7 +8,9 @@ There's also a trello as the project expands that you can keep an eye on [here](
 + A decent enough server (I can run this fine on a 2GB Digitalocean droplet with 50GB storage)
 
 # How to set up
-+ 1. Clone the repository to your directory of choice on your server. (It will create its own folder so keep this in mind) (``git clone https://github.com/dev-sda1/CentroBot.git``). This shouldn't take long
++ 1. Clone the repository to your directory of choice on your server. (It will create its own folder so keep this in mind) 
+``git clone https://github.com/dev-sda1/CentroBot.git`` This shouldn't take long to copy over if your provider's bandwidth is good enough
+
 + 2. Edit the config.json file in the storage folder to add your token and mongo account. [Make sure it's secure! Click here if you don't know how](https://www.digitalocean.com/community/tutorials/how-to-secure-mongodb-on-ubuntu-20-04)
 + 3. Navigate to the root of the folder and run ``npm install && npm bot``
 + 4. Check that your bot is online in the server!
