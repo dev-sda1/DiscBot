@@ -1,4 +1,4 @@
-const{RichEmbed} = require("discord.js");
+const{MessageEmbed} = require("discord.js");
 const ms = require("ms");
 
 module.exports={
@@ -8,9 +8,9 @@ module.exports={
     usage: "ban @dev_sda3 existing\nban @dev_sda3 7d existing",
     run: async(client,message,args)=>{
 
-        if(args == null){
+        if(args[0] == null){
             //some random stuff explaining the command goes here idk
-            let explainEmbed = new RichEmbed()
+            let explainEmbed = new MessageEmbed()
                 .setAuthor(client.name, client.avatarURL)
                 .setDescription(module.exports.name)
                 .addField("Category", module.exports.category)
@@ -19,21 +19,30 @@ module.exports={
             await message.channel.send(explainEmbed);
         }
 
-        let target = message.mentions.members.first() || message.guild.members.get(args[0])
-        let time = String(args[1])
-        let reason = args.join(" ").slice(22) || "No reason Provided";
-        reason = reason.slice(time.length || 0);
-        console.log(reason);
-        console.log(target);
-        await target.send(`You have been banned from ${message.guild.name} for:${reason}`); //There's a weird space that's added to the beginning I cba to find out how to remove but it eh it does the formatting for me
-        await target.ban(reason);
+        //let target = message.mentions.members.cache.first() || message.guild.members.cache.get(args[0])
+        let target = message.mentions.members.last() || message.guild.members.cache.get(target);
+        if(!target) return message.reply("User cannot be found");
+        let time = String(args[1]);
+        //console.log(time);
+        let reason = args.join(" ").slice(22) || "No reason provided";
+        reason = reason.slice(time.length).slice(2) || "No reason provided";
+
+        let banEmbed = new MessageEmbed()
+            .setAuthor("Ban")
+            .setTitle(`You have been banned from ${message.guild.name}`)
+            .addField("Reason", `${reason}`)
+            .setFooter("Powered by [witty_name](https://github.com/dev-sda1/CentroBot)")
+            .setColor("RED");
+
+        await target.send(banEmbed); //There's a weird space that's added to the beginning I cba to find out how to remove but it eh it does the formatting for me
+        //await target.members.ban(reason);
 
         //log stuff would go here.
 
-        setTimeout(function(){
-            target.unban(target,"Timeout expired");
-            //log stuff would go here.
-        }, ms(time));
+        //setTimeout(function(){
+        //    target.members.unban(target,"Timeout expired");
+        //    //log stuff would go here.
+        //}, ms(time));
 
         
     }

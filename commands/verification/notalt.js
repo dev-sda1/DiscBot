@@ -1,12 +1,4 @@
 const mongoose = require("mongoose");
-mongoose.connect('',
-        {
-            "auth": {
-                "authSource": ""
-            },
-            "user": "",
-            "pass": ""
-        });
 
 const altCheck = require("../../models/potentialalts.js");
 const logs = require("../../functions/logaction.js");
