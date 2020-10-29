@@ -1,7 +1,4 @@
-//TODO: REWRITE TICKET OPTION SELECTION SYSTEM
-
-
-const{RichEmbed} = require("discord.js");
+const{MessageEmbed} = require("discord.js");
 const{promptMessage, promptMessageString} = require("../../functions/responses.js")
 const mongoose = require("mongoose");
 const ticket = require("../../models/ticket.js");
@@ -13,7 +10,7 @@ let actuallythroughdm = false;
 
 function moderationIssue(client,message){
     console.log("MOD ISSUE");
-    let embed2 = new RichEmbed()
+    let embed2 = new MessageEmbed()
         .setColor("BLUE")
         .setAuthor("Moderation issue")
         .setDescription("OK - What role does this concern?")
@@ -26,7 +23,7 @@ function moderationIssue(client,message){
 
         switch(emoji2){
             case "1️⃣":
-                let embed2 = new RichEmbed()
+                let embed2 = new MessageEmbed()
                 .setColor("BLUE")
                 .setAuthor("Moderation issue - Moderator Role")
                 .setDescription("Alright, it's a moderator issue. Can you briefly describe your issue? (Please also include any screenshot links here too) **Times out in 300s**")
@@ -41,7 +38,7 @@ function moderationIssue(client,message){
             });
 
             case "2️⃣":
-                let embed3 = new RichEmbed()
+                let embed3 = new MessageEmbed()
                 .setColor("BLUE")
                 .setAuthor("Moderation issue - Admin Role")
                 .setDescription("Alright, it's an admin issue. Can you briefly describe your issue? (Please also include any screenshot links here too) **Times out in 300s**")
@@ -62,7 +59,7 @@ function moderationIssue(client,message){
 }
 
 function generalQuery(client,message){
-    let embed2 = new RichEmbed()
+    let embed2 = new MessageEmbed()
         .setColor("BLUE")
         .setAuthor("General Query")
         .setDescription("Can you describe what you're contacting us for? (Please also include any screenshot links here) **Times out in 300s. Type ``cancel`` to go back**");
@@ -80,7 +77,7 @@ function generalQuery(client,message){
 }
 
 function mainMenu(client,message){
-    let embed = new RichEmbed()
+    let embed = new MessageEmbed()
         .setColor("BLUE")
         .setAuthor("Centro Travel")
         .addField("Welcome to our DM menu. What are you using me for?", "Select an option below")
@@ -132,7 +129,7 @@ function processTicket(client,message,fullTicket){
     .then(result=>console.log(result))
     .catch(err=>console.log(err));
 
-    let ticketEmbedClient = new RichEmbed()
+    let ticketEmbedClient = new MessageEmbed()
         .setColor("GREEN")
         .setAuthor("Ticket submitted!")
         .setDescription(`Your ID: ${generatedID}\nYou should recieve a response within 24 hours.\n**If you submitted a suggestion, it may not get a response but it will have been read**`)
@@ -140,14 +137,14 @@ function processTicket(client,message,fullTicket){
         .addField("Ticket Type", fullTicket[0])
         .addField("Message", fullTicket[1]);
 
-    let ticketEmbedAdmin = new RichEmbed()
+    let ticketEmbedAdmin = new MessageEmbed()
         .setColor("GREEN")
         .setAuthor(`Ticket ${generatedID}`)
         .addField("Username", `<@${fullTicket[2]}>`)
         .addField("Ticket Type", fullTicket[0])
         .addField("Message", fullTicket[1]);
 
-    client.channels.get(botTicketsChannel).send(ticketEmbedAdmin);
+    client.channels.cache.get(botTicketsChannel).send(ticketEmbedAdmin);
     message.author.send(ticketEmbedClient);
 }
 

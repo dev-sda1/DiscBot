@@ -19,7 +19,6 @@ module.exports={
             await message.channel.send(explainEmbed);
         }
 
-        //let target = message.mentions.members.cache.first() || message.guild.members.cache.get(args[0])
         let target = message.mentions.members.last() || message.guild.members.cache.get(target);
         if(!target) return message.reply("User cannot be found");
         let time = String(args[1]);

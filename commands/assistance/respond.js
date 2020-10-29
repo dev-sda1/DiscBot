@@ -54,7 +54,7 @@ module.exports={
             if(!foundTicket){
                 return message.channel.send("Ticket couldn't be found, or has been recently closed.");
             }else{
-                let user = message.guild.members.get(foundTicket.userid);
+                let user = message.guild.members.cache.get(foundTicket.userid);
                 console.log(user);
                 user.send(responseEmbed).then(async msg =>{
                     let emoji2 = await promptMessage(msg, user, 60, ["✅", "❌"]);
@@ -65,7 +65,7 @@ module.exports={
                         }, (err)=>{
                             if(err) console.log(err);
                         })
-                        client.channels.get(botTicketsChannel).send(ticketClosedSolved);
+                        client.channels.cache.get(botTicketsChannel).send(ticketClosedSolved);
                         return user.send(answered);
                     }else if(emoji2 === "❌"){
                         user.send(didntAnswer).then(async msg2=>{
@@ -83,7 +83,7 @@ module.exports={
                                 .addField("Username", `<@${user}>`)
                                 .addField("Message", replytoResponse);
 
-                            client.channels.get(botTicketsChannel).send(ticketEmbedAdmin);
+                            client.channels.cache.get(botTicketsChannel).send(ticketEmbedAdmin);
                             user.send(ticketEmbedClient);
                         })
                     }

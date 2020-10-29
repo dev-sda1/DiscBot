@@ -14,12 +14,17 @@ module.exports={
                 .addField("Usage", module.exports.usage);
             await message.channel.send(explainEmbed);
         }else {
-            let target = message.mentions.members.first() || message.guild.members.get(args[0])
+            let target = message.mentions.members.last() || message.guild.members.cache.get(args[0])
             let reason = args.join(" ").slice(22) || "No reason Provided";
-            //reason = reason.slice(time.length).slice(2);
-            console.log(reason);
-            console.log(target);
-            await target.send(`You have been kicked from ${message.guild.name} for:${reason}`);
+
+            let kickEmbed = new MessageEmbed()
+            .setAuthor("Kick")
+            .setTitle(`You have been kicked from ${message.guild.name}`)
+            .addField("Reason", `${reason}`)
+            .setFooter("Powered by [witty_name](https://github.com/dev-sda1/CentroBot)")
+            .setColor("RED");
+
+            await target.send(kickEmbed);
             await target.kick(reason);
         }
 

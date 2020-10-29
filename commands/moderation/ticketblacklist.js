@@ -14,7 +14,7 @@ module.exports={
 
         if(message.deletable) message.delete();
 
-        let blacklisteduser = message.mentions.members.first() || message.guild.members.cache.get(args[0])
+        let blacklisteduser = message.mentions.members.last() || message.guild.members.cache.get(args[0])
 
         if(!message.member.hasPermission("MANAGE_MESSAGES")) return;
         if(!blacklisteduser) return message.reply("User cannot be found");
