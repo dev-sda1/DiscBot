@@ -1,8 +1,8 @@
 {
-    "token": "Njk3OTQxMTI1MDg4MTQ5NTI1.Xo-mUw.aZ2BRpRybDHXqzEbzt_RLd8MveU",
+    "token": "",
     "mongodb_authSource": "admin",
-    "mongodb_username": "sdaOneAdmin",
-    "mongodb_password": "20e4f82b8979d249921e7731df",
-    "mongodb_url": "mongodb://134.209.29.228:13374/botDevelopment",
+    "mongodb_username": "",
+    "mongodb_password": "",
+    "mongodb_url": "",
     "prefix": ">"
 }
