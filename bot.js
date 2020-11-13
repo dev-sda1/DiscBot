@@ -116,7 +116,7 @@ if(config.token == null){
 
 //Checking if mongodb connects successfully
 try{
-    mongoose.connect(config.mongodb_url,
+    mongoose.connect(config.mongodb_url, //Completely forgot about this
         {
             "auth": {
             "authSource": "admin"
