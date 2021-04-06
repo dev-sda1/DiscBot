@@ -1,6 +1,6 @@
-# Centrobot
-Centrobot started out as a side project for a discord server, but I have since decided to opensource it for others to use.
-There's also a trello as the project expands that you can keep an eye on [here](https://trello.com/b/FIP9LU4l/centrobot-updates)
+# Discord Bot
+Started out as a side project for a discord server, but I have since decided to opensource it for others to use.
+This project will likely not see any more updates as I look for other (more enjoyable) things to do instead.
 
 # Prerequisites:
 + NodeJS and npm
@@ -9,7 +9,7 @@ There's also a trello as the project expands that you can keep an eye on [here](
 
 # How to set up
 + 1. Clone the repository to your directory of choice on your server. (It will create its own folder so keep this in mind) 
-``git clone https://github.com/dev-sda1/CentroBot.git`` This shouldn't take long to copy over if your provider's bandwidth is good enough
+``git clone https://github.com/dev-sda1/DiscBot.git`` This shouldn't take long to copy over if your provider's bandwidth is good enough
 + 2. Edit the config.json file in the storage folder to add your token and mongo account. [Make sure it's secure! Click here if you don't know how](https://www.digitalocean.com/community/tutorials/how-to-secure-mongodb-on-ubuntu-20-04)
 + 3. Navigate to the root of the folder and run ``npm install && npm bot``
 + 4. Check that your bot is online in the server!
